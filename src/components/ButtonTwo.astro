@@ -1,0 +1,30 @@
+---
+const { isRounded= false } = Astro.props; //Parte de Javascript
+---
+
+<button 
+    class:list={[
+        "text-black",
+        "bg-slate-400",
+        "border-[1.5px]",
+        "border-black",
+        "rounded-full",
+        "p-3",
+        "font-sans",
+        "md:font-semibold",
+        "m-2",
+        "hover:bg-slate-500",
+        "transition-colors",
+        "focus:outline-none",
+        { rounded: isRounded },
+        
+    ]}
+    class="flex"
+    
+>
+<!-- aca va el orden de los slots -->
+    <slot name="text"/>
+       <div class="bg-red-600 text-white rounded-full flex p-1 ml-2 size-6 justify-center items-center">
+    <slot name="icon"/>
+       </div>
+</button>

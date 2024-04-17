@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';      //aqui se importan los componentes de tipo astro que tu creaste
+import Button from '../components/Button.astro';
+import ButtonTwo from '../components/ButtonTwo.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<Button />                     <!-- si no modificas tu componente va a tener el valor de constante que tu modificaste  -->
+	<Button text="Cancelar" isRounded/>
+	<Button text="Atras"/>
+	<Button text="Banear"/>
+
+	<ButtonTwo>
+		<span slot="text">
+			este es el boton 
+		</span>
+		<span slot="icon">
+			X
+		</span>
+	</ButtonTwo>
+
+
+</Layout>
